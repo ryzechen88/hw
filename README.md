@@ -18,6 +18,8 @@ This website was created in `/home/ubuntu/hello world`.
 - `static/styles.css`: page styles
 - `static/app.js`: frontend JavaScript
 - `requirements.txt`: Python dependencies
+- `Dockerfile`: image build definition
+- `docker-compose.yml`: pull-and-run compose file for published image
 
 ## Run
 
@@ -52,7 +54,34 @@ docker run -d --name hw -p 13333:13333 hw
 
 ### Docker Compose
 
+Pull the published image:
+
 ```bash
 cd "/home/ubuntu/hello world"
-docker compose up -d --build
+docker compose pull
+docker compose up -d
 ```
+
+Published image:
+
+```bash
+ghcr.io/ryzechen88/hw:latest
+```
+
+### 1Panel
+
+In 1Panel Compose, you can use:
+
+```yaml
+services:
+  hw:
+    image: ghcr.io/ryzechen88/hw:latest
+    container_name: hw
+    ports:
+      - "13333:13333"
+    restart: unless-stopped
+```
+
+### Publish Image
+
+This repository includes a GitHub Actions workflow that publishes the Docker image to GHCR when you push to `main`.

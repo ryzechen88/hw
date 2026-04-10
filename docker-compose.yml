@@ -1,6 +1,6 @@
 services:
   hw:
-    build: .
+    image: ghcr.io/ryzechen88/hw:latest
     container_name: hw
     ports:
       - "13333:13333"
