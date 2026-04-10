@@ -42,6 +42,14 @@ h1 {
   animation: rainbow-cycle 14s steps(1, end) infinite;
 }
 
+.subtitle {
+  margin: 0;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
 @keyframes rainbow-cycle {
   0%,
   14.285% {
