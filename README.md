@@ -21,6 +21,8 @@ This website was created in `/home/ubuntu/hello world`.
 
 ## Run
 
+### Python
+
 ```bash
 cd "/home/ubuntu/hello world"
 source .venv/bin/activate
@@ -31,4 +33,26 @@ Then open:
 
 ```bash
 http://127.0.0.1:13333
+```
+
+### Docker
+
+Build the image:
+
+```bash
+cd "/home/ubuntu/hello world"
+docker build -t hw .
+```
+
+Run the container:
+
+```bash
+docker run -d --name hw -p 13333:13333 hw
+```
+
+### Docker Compose
+
+```bash
+cd "/home/ubuntu/hello world"
+docker compose up -d --build
 ```

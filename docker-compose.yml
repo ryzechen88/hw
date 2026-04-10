@@ -1,0 +1,7 @@
+services:
+  hw:
+    build: .
+    container_name: hw
+    ports:
+      - "13333:13333"
+    restart: unless-stopped
