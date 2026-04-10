@@ -38,6 +38,47 @@ h1 {
   text-transform: lowercase;
 }
 
+#message {
+  animation: rainbow-cycle 14s steps(1, end) infinite;
+}
+
+@keyframes rainbow-cycle {
+  0%,
+  14.285% {
+    color: #ff0000;
+  }
+
+  14.286%,
+  28.571% {
+    color: #ff7f00;
+  }
+
+  28.572%,
+  42.857% {
+    color: #ffff00;
+  }
+
+  42.858%,
+  57.143% {
+    color: #00aa00;
+  }
+
+  57.144%,
+  71.429% {
+    color: #00cfff;
+  }
+
+  71.43%,
+  85.715% {
+    color: #0047ff;
+  }
+
+  85.716%,
+  100% {
+    color: #8b00ff;
+  }
+}
+
 .button {
   display: inline-flex;
   align-items: center;
